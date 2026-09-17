@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Crescendo BI — Make your business understandable to AI</title>
+  <meta name="description" content="Crescendo BI makes businesses understandable to AI by connecting fragmented data, systems, definitions, and institutional knowledge.">
+  <meta name="theme-color" content="#071916">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23071916'/%3E%3Cpath d='M13 43V31h8v12zm15 0V22h8v21zm15 0V13h8v30z' fill='%23c8ff4a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Crescendo BI home">
+      <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>Crescendo <b>BI</b></span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#challenge">The challenge</a>
+      <a href="#approach">Our approach</a>
+      <a class="nav-cta" href="mailto:elliot@crescendo-bi.com">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">AI-ready business foundations</p>
+        <h1>We make businesses <em>understandable to AI.</em></h1>
+        <p class="lede">The next challenge is not choosing the right AI tool. It is making sure AI understands how your business actually works.</p>
+        <a class="text-link" href="#challenge">See what that requires <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="signal" aria-label="A progression from disconnected inputs to shared intelligence">
+        <div class="signal-labels"><span>Systems</span><span>Business language</span></div>
+        <div class="signal-lines" aria-hidden="true">
+          <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span style="--i:4"></span><span style="--i:5"></span><span style="--i:6"></span>
+        </div>
+        <p>Many sources.<br><strong>One coherent understanding.</strong></p>
+      </div>
+    </section>
+
+    <section class="challenge" id="challenge">
+      <div class="section-number">01</div>
+      <div class="section-content reveal">
+        <p class="eyebrow dark">The real AI readiness gap</p>
+        <h2>AI cannot reason about a business it cannot understand.</h2>
+        <p>Organizations run across finance, operations, sales, service, products, customers, and locations. The data exists—but it is fragmented across platforms, shaped by inconsistent definitions, and separated from the institutional knowledge that gives it meaning.</p>
+        <p>Crescendo BI connects those pieces into a clear, governed business language: a foundation AI can interpret, reason over, and eventually act on.</p>
+      </div>
+      <div class="system-list reveal" aria-label="Examples of connected business domains">
+        <span>Finance</span><span>Operations</span><span>Sales</span><span>Service</span><span>Products</span><span>People</span><span>Customers</span><span>Partners</span><span>Locations</span>
+      </div>
+    </section>
+
+    <section class="approach" id="approach">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A practical progression</p>
+        <h2>Build understanding before autonomy.</h2>
+      </div>
+      <ol class="stages">
+        <li class="reveal">
+          <span class="stage-no">01</span>
+          <div><h3>Foundation</h3><p>Connect systems, align definitions, capture business rules, and establish trusted data.</p></div>
+        </li>
+        <li class="reveal">
+          <span class="stage-no">02</span>
+          <div><h3>Intelligence</h3><p>Give people and AI a consistent way to explore performance, explain outcomes, and identify opportunity.</p></div>
+        </li>
+        <li class="reveal">
+          <span class="stage-no">03</span>
+          <div><h3>Automation</h3><p>Enable AI to support decisions and workflows with the context and controls the business requires.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="future" id="future">
+      <div class="section-number light">02</div>
+      <div class="future-copy reveal">
+        <p class="eyebrow">Built for what comes next</p>
+        <h2>The platform will change.<br>The foundation will endure.</h2>
+        <p>Crescendo BI prepares organizations to benefit from today’s tools—and adapt to tomorrow’s—without rebuilding the meaning of the business every time technology changes.</p>
+      </div>
+      <div class="outcomes reveal">
+        <span>Better decisions</span>
+        <span>Smarter operations</span>
+        <span>Trusted automation</span>
+        <span>Emerging business models</span>
+      </div>
+    </section>
+
+    <section class="closing">
+      <p class="eyebrow dark">Crescendo BI</p>
+      <h2>Before you build the future, make your business understandable to it.</h2>
+      <a class="contact-link" href="mailto:elliot@crescendo-bi.com">elliot@crescendo-bi.com <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Crescendo <b>BI</b></span></a>
+    <p><a class="footer-contact" href="mailto:elliot@crescendo-bi.com">elliot@crescendo-bi.com</a></p>
+    <p>© <span id="year"></span> Crescendo BI</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
