@@ -1,8 +1,29 @@
 {
- "$schema": "node_modules/wrangler/config-schema.json",
- "name": "crescendo-bi-com",
- "main": "worker.js",
- "compatibility_date": "2026-10-04",
- "assets": {"directory":"./public", "binding":"ASSETS", "run_worker_first":["/api/*","/download/*","/private/*","/crescendo-media-case-study.pdf","/case-study.html"]},
- "kv_namespaces": [{"binding":"CASE_STUDY_LEADS","id":"c73da7fe384947a9a833094025471eff"}]
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "crescendo-bi-com",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-04",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*",
+      "/download/*",
+      "/private/*",
+      "/crescendo-media-case-study.pdf",
+      "/case-study.html"
+    ]
+  },
+  "kv_namespaces": [
+    {
+      "binding": "CASE_STUDY_LEADS",
+      "id": "c73da7fe384947a9a833094025471eff"
+    }
+  ],
+  "send_email": [
+    {
+      "name": "DOWNLOAD_EMAIL",
+      "destination_address": "elliot@crescendo-bi.com"
+    }
+  ]
 }
