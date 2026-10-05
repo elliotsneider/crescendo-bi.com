@@ -1,9 +1,11 @@
 import { notifyDownload } from './download-notification.js';
+import { leadsSync } from './leads-sync.js';
 const noStore = {'Cache-Control':'no-store', 'X-Robots-Tag':'noindex, nofollow'};
 function redirect(path, headers={}) { return new Response(null,{status:303,headers:{...noStore,Location:path,...headers}}); }
 export default {
  async fetch(request, env, ctx) {
   const url = new URL(request.url);
+  if(url.pathname === '/api/leads-sync') return leadsSync(request,env);
   if (url.pathname === '/api/case-study') {
    if(request.method !== 'POST') return new Response('Method not allowed',{status:405,headers:{Allow:'POST',...noStore}});
    if(request.headers.get('Origin') !== url.origin) return new Response('Forbidden',{status:403,headers:noStore});
