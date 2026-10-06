@@ -5,6 +5,8 @@ function redirect(path, headers={}) { return new Response(null,{status:303,heade
 export default {
  async fetch(request, env, ctx) {
   const url = new URL(request.url);
+  if(url.pathname === '/crescendo-media-case-study.pdf') return env.ASSETS.fetch(request);
+  if(url.pathname === '/download/case-study' || url.pathname === '/api/case-study') return redirect('/crescendo-media-case-study.pdf');
   if(url.pathname === '/api/leads-sync') return leadsSync(request,env);
   if (url.pathname === '/api/case-study') {
    if(request.method !== 'POST') return new Response('Method not allowed',{status:405,headers:{Allow:'POST',...noStore}});
