@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Apps — Crescendo BI</title>
+  <meta name="description" content="Explore apps built by Crescendo BI to help people collect useful data, control access, and use the AI tools they choose.">
+  <meta name="theme-color" content="#071916">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23071916'/%3E%3Cpath d='M13 43V31h8v12zm15 0V22h8v21zm15 0V13h8v30z' fill='%23c8ff4a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="apps-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Crescendo BI home">
+      <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>Crescendo <b>BI</b></span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html#challenge">The challenge</a>
+      <a href="index.html#approach">Our approach</a>
+      <a href="apps.html" aria-current="page">Apps</a>
+      <a class="nav-cta" href="mailto:elliot@crescendo-bi.com">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="apps-hero">
+      <div class="apps-hero-copy reveal">
+        <p class="eyebrow">Crescendo BI Apps</p>
+        <h1>Small apps.<br><em>Useful data.</em></h1>
+        <p class="lede">Collect what matters, keep control of the record, and decide when your AI can use it.</p>
+      </div>
+      <article class="featured-app-card reveal" id="toss">
+        <div class="featured-app-topline">
+          <span>01</span>
+          <span>For iPhone</span>
+        </div>
+        <div class="featured-app-title">
+          <span class="app-icon" aria-hidden="true">T</span>
+          <div><h2>Toss</h2><p>Meal tracking that puts you in control.</p></div>
+        </div>
+        <p>Log a meal with a photo, your voice, or a manual entry. Review the calorie and protein estimate, correct it, and save a record you control.</p>
+        <ul aria-label="Toss capture options"><li>Photo</li><li>Voice</li><li>Manual</li></ul>
+        <p class="privacy-note">For an estimate, Toss sends only the meal photo or voice recording you submit and its transcript—nothing else.</p>
+        <span class="store-button" aria-label="Toss will be available on the App Store in the future"><small>Coming soon on the</small><strong>App Store</strong></span>
+      </article>
+    </section>
+
+    <section class="app-values" aria-label="How Crescendo BI apps work">
+      <article class="reveal"><span>01</span><h3>You review it</h3><p>Check and correct every record before it becomes part of your history.</p></article>
+      <article class="reveal"><span>02</span><h3>You control it</h3><p>Export your records or grant limited access. Disconnect a tool at any time.</p></article>
+      <article class="reveal"><span>03</span><h3>Your AI uses it</h3><p>Compare weeks, spot patterns, or get a recap with the AI tool you choose.</p></article>
+    </section>
+
+    <section class="framework-summary" id="template">
+      <div class="reveal">
+        <p class="eyebrow dark">The Capture template</p>
+        <h2>One reusable foundation.<br>Each app has one clear job.</h2>
+      </div>
+      <p class="framework-copy reveal">Capture is Crescendo BI’s template for personal-data apps: secure accounts, records people can review and correct, portable exports, and limited access that can be revoked. Toss applies that foundation to meals; future apps can apply it to other kinds of data.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Crescendo <b>BI</b></span></a>
+    <p>Shared understanding, built to endure.</p>
+    <p>© <span id="year"></span> Crescendo BI</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
