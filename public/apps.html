@@ -68,10 +68,9 @@
   <footer>
     <a class="brand" href="index.html"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span><span>Crescendo <b>BI</b></span></a>
     <p>Shared understanding, built to endure.</p>
-    <p>© <span id="year"></span> Crescendo BI</p>
+    <p class="publisher-notice">Crescendo BI is part of Three Gypsies Publishing, LLC.<br>© &amp; ℗ 2025 Three Gypsies Publishing, LLC. All rights reserved.</p>
   </footer>
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
       if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
     }), { threshold: 0.12 });
